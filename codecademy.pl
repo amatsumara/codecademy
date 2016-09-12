@@ -37,11 +37,20 @@ def is_prime(x):
             print "true"
             return True
 
+def reverse(text):
+    rtext = ""
+    #rtext.append('t')
+    for rchar in range(len(text)-1,-1,-1):
+         rtext += (text[rchar])
+    return rtext
+
 def main():
     x = 3
+    text = "Python!"
     #print digit_sum(x)
     #print factorial(x)
-    print is_prime(x)
+    #print is_prime(x)
+    print reverse(text)
 
 
 if __name__ == "__main__":
