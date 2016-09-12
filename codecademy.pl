@@ -50,7 +50,7 @@ def main():
     #print digit_sum(x)
     #print factorial(x)
     #print is_prime(x)
-    print reverse(text)
+    #print reverse(text)
 
 
 if __name__ == "__main__":
