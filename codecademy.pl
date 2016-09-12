@@ -38,7 +38,7 @@ def is_prime(x):
             return True
 
 def main():
-    x = 3
+    x = 15
     #print digit_sum(x)
     #print factorial(x)
     print is_prime(x)
