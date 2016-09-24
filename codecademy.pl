@@ -44,6 +44,16 @@ def reverse(text):
          rtext += (text[rchar])
     return rtext
 
+def anti_vowel(text):
+    s = ""
+    for c in text:
+        if c not in "aeiouAEIOU":
+            print c,
+            s+=c
+    return s
+            
+
+
 def main():
     x = 15
     text = "Python!"
@@ -51,7 +61,7 @@ def main():
     #print factorial(x)
     #print is_prime(x)
     #print reverse(text)
-
+    print anti_vowel(text)
 
 if __name__ == "__main__":
     main()
