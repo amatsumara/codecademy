@@ -18,7 +18,7 @@ def factorial(x):
     elif x == 0:
         f = 1
         return f
-    f = f * x
+    f *= x
     return f
 
 
@@ -30,7 +30,7 @@ def is_prime(x):
     else:
         # for x==3 this loop doesn't executes
         for n in range(2, x - 1):
-            if (x % n == 0):
+            if x % n == 0:
                 print "false"
                 return False
         else:
@@ -71,6 +71,20 @@ def purify(plist):
     return plisted
 
 
+def median(somelist):
+    m = 0.0
+    sll = len(somelist)
+    somelist_s = sorted(somelist)
+    if sll % 2 == 0:
+        index = sll / 2 - 1
+        print index, somelist_s[index], somelist_s[index + 1]
+        m = float(somelist_s[index] + somelist_s[index + 1]) / 2
+    else:
+        index = int(sll / 2)
+        m = somelist_s[index]
+    return m
+
+
 def main():
     x = 15
     text = "Python!"
@@ -81,6 +95,7 @@ def main():
     # print anti_vowel(text)
     # print count(sequence=[1,2,1,1],item=1)
     # print purify([1, 2, 3])
+    print median([4, 5, 5, 4])
 
 if __name__ == "__main__":
     main()
