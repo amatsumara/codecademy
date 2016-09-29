@@ -1,5 +1,3 @@
-#
-
 # Using recursion instead of strings
 def digit_sum(x):
     summ = 0
@@ -11,6 +9,7 @@ def digit_sum(x):
     print summ
     return summ
 
+
 # Recursion instead of loop
 def factorial(x):
     f = 1
@@ -21,6 +20,7 @@ def factorial(x):
         return f
     f = f * x
     return f
+
 
 def is_prime(x):
     if x < 2:
@@ -37,31 +37,50 @@ def is_prime(x):
             print "true"
             return True
 
+
 def reverse(text):
     rtext = ""
-    #rtext.append('t')
+    # rtext.append('t')
     for rchar in range(len(text)-1,-1,-1):
          rtext += (text[rchar])
     return rtext
+
 
 def anti_vowel(text):
     s = ""
     for c in text:
         if c not in "aeiouAEIOU":
             print c,
-            s+=c
+            s += c
     return s
             
+
+def count(sequence, item):
+    found = 0
+    for c in range(0, len(sequence)):
+        if sequence[c] == item:
+            found += 1
+    return found
+
+
+def purify(plist):
+    plisted = []
+    for c in range(0, len(plist)):
+        if plist[c] % 2 == 0:
+            plisted.append(plist[c])
+    return plisted
 
 
 def main():
     x = 15
     text = "Python!"
-    #print digit_sum(x)
-    #print factorial(x)
-    #print is_prime(x)
-    #print reverse(text)
-    print anti_vowel(text)
+    # print digit_sum(x)
+    # print factorial(x)
+    # print is_prime(x)
+    # print reverse(text)
+    # print anti_vowel(text)
+    # print count(sequence=[1,2,1,1],item=1)
+    # print purify([1, 2, 3])
 
 if __name__ == "__main__":
     main()
